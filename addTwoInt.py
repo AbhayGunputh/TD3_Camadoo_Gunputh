@@ -3,13 +3,17 @@ def addint(number1,number2):
     result = number1 + number2
     return result
 
-num1 = float(input("Enter the first number : "))
-while(num1 < 0):
-    print("-----Please enter positive numbers ONLY-----")
-    num1 = float(input("Enter the first number : "))
-print()
-num2 = float(input("Enter the Second number : "))
-while(num2 < 0):
-    print("-----Please enter positive numbers ONLY-----")
-    num2 = float(input("Enter the second number : "))
-print(addint(num1,num2))
+def main():
+	import sys
+	print (sys.argv)
+	i=(len(sys.argv)-1)
+	print ("the number of arguments : ",i)
+
+	if (i==2):
+		x = int (sys.argv[1])
+		y = int (sys.argv[2])
+		print(addint(number1,number2))
+	else:
+		print("error : please insert only 2 arguments")
+	
+main()
